@@ -8,17 +8,18 @@
     	// Write a function that ensures at least one but ONLY one radio button is selected.  Make sure the form action is not performed if either field is blank.
       var s = document.getElementById("opt-straw");
       var b = document.getElementById("opt-blue");
-      // console.log(s);
-
-      // document.write(s.checked)
-
+      
+      
       if (s.checked == false && b.checked == false){
-        document.getElementById('mysub').disabled = true;
+        // document.getElementById('mysub').disabled = true;
+        
         alert("Please pick a fruit!");
+        return false;
     
       }
       else{
-        document.getElementById('mysub').disabled = false;
+        // document.getElementById('mysub').disabled = false;
+        return true;
       }
     }
       
@@ -36,7 +37,7 @@
         <div>
           What's your favorite berry?: 
           <label>
-            <input type="radio" name= "fruit" value = "s" id="opt-straw"> Strawberries
+            <input type="radio" name= "fruit" value = "s" id="opt-straw" > Strawberries
           </label>
           <label>
             <input type="radio" name = "fruit" value = "b" id="opt-blue"> Blueberries
